@@ -135,7 +135,7 @@ main {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    
+    background: var(--color004) url(../imagens/wave.svg) no-repeat fixed left bottom;
 }
 
 .home1 {
