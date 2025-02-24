@@ -36,12 +36,12 @@ body {
     font-family: var(--fonte001);
 }
 
-html , body {
-    overflow-x: hidden;
+section {
+    scroll-margin-top: 100px;
 }
 
 header {
-    width: 100%;
+    width: 100vw;
     backdrop-filter: blur(10px);
     position: fixed;
     display: flex;
@@ -51,6 +51,7 @@ header {
     padding: 30px;
     background-color: #1c1c1c57;
     z-index: 100;
+    right: 0px;
 }
 
 header img {
@@ -142,18 +143,18 @@ main #home {
     background: var(--color004) url(../imagens/wave.svg) no-repeat fixed left bottom;
 }
 
-.home1 {
+.home {
     color: white;
     padding: 30px;
     width: 400px;
 }
 
-.home1 h1 {
+.home h1 {
     font-size: 70px;
     line-height: 60px;
 }
 
-.home1 hr {
+.home hr {
     background-color: var(--color001);
     height: 2px;
     border: none;
@@ -161,7 +162,7 @@ main #home {
     margin: 20px 0px 20px 0px;
 }
 
-.home1 p {
+.home p {
     font-weight: 400;
     padding-bottom: 20px;
 }
@@ -269,21 +270,25 @@ main #home {
     background-color: white;
 }
 
-/* CARDS */
-
 #games {
     background-color: white;
-    width: 100vw;
-    height: calc(100vh - 103px);
+    width: 99vw;
+    height: 90vh;
 }
 
 .text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    width: 40%;
     padding: 60px;
     text-align: center;
 }
 
 .text h1 {
     font-size: 5em;
+    line-height: 60px;
 }
 
 .text hr {
@@ -293,6 +298,29 @@ main #home {
     border: none;
     width: 50%;
     margin: 20px 0px 20px 0px;  
+}
+
+.text p {
+    font-weight: 400;
+}
+
+.explore-games {
+    border: none;
+    color: white;
+    background-color: var(--color001);
+    padding: 10px;
+    font-family: var(--fonte001);
+    font-weight: 400;
+    width: 120px;
+    height: 40px;
+    margin-top: 30px;
+    transition: all .3s ease-in-out;
+}
+
+.explore-games:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
 }
 
 .container {
