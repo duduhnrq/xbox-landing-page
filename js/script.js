@@ -31,3 +31,30 @@ function goToSlide(index) {
 }
 
 showSlide(currentIndex);
+
+document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.getElementById("menu-toggle");
+    const menu = document.getElementById("menu");
+  
+    function checkScreenSize() {
+      if (window.innerWidth > 1000) {
+        menu.classList.remove("open");
+        menu.style.display = "flex"; 
+        menu.style.opacity = "1";
+        menu.style.visibility = "visible";
+        menu.style.transform = "none";
+      } else {
+        menu.style.display = "";
+        menu.style.opacity = "";
+        menu.style.visibility = "";
+        menu.style.transform = "";
+      }
+    }
+  
+    menuToggle.addEventListener("click", function () {
+      menu.classList.toggle("open");
+    });
+  
+    checkScreenSize();
+    window.addEventListener("resize", checkScreenSize);
+  });
