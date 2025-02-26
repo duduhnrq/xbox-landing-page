@@ -452,5 +452,29 @@ main #home {
         background-color: var(--color004);
     }
 
-    
+    #home {
+        flex-direction: column-reverse;
+        gap: 5%;
+        padding-top: 50px;
+    }
+
+    .carousel {
+        max-width: 500px;
+    }
+
+    #games {
+        width: 99vw;
+    }
+
+    .text {
+        width: 80%;
+    }
+
+    .text h1{
+        font-size: 3em;
+    }
+
+    .container {
+        display: none;
+    }
 }
