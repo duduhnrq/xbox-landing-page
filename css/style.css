@@ -178,12 +178,16 @@ main #home {
     width: 250px;
 }
 
-.btn button{
+.btn a {
     flex: 1;
+}
+
+.btn button{
     border: none;
     padding: 10px;
     font-family: var(--fonte001);
     font-weight: 400;
+    width: 120px;
 }
 
 .btn .learn-more {
@@ -456,10 +460,27 @@ main #home {
         flex-direction: column-reverse;
         gap: 5%;
         padding-top: 50px;
+        text-align: center;
     }
 
     .carousel {
         max-width: 500px;
+    }
+
+    .home h1 {
+        padding-bottom: 20px;
+    }
+
+    .home hr {
+        margin: 0 auto;
+    }
+
+    .home p {
+        padding-top: 20px;
+    }
+
+    .btn {
+        margin: 0 auto;
     }
 
     #games {
@@ -475,6 +496,40 @@ main #home {
     }
 
     .container {
-        display: none;
+        flex-direction: column;
+    }
+    
+    .card {
+        height: 300px;
+        width: 500px;
+    }
+
+    .card:not(:first-child) {
+        margin-left: 0px;
+        margin-top: -30px;
+    }
+
+    .card:hover {
+        transform: translate(10px 50%)
+    }
+
+    .card:hover ~ .card {
+        position: relative;
+        left: 0px;
+        transition: 0.4s ease-out;
+    }
+}
+
+@media (max-width: 768px) {
+    #home {
+        padding-top: 20px;
+    }
+
+    .home h1 {
+        font-size: 40px;
+    }
+
+    .home p {
+        font-size: 14px;
     }
 }
