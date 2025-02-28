@@ -297,7 +297,8 @@ nav img {
 }
 
 .text h1 {
-    font-size: 5em;
+    padding-top: 30px;
+    font-size: 70px;
     line-height: 60px;
 }
 
@@ -323,7 +324,7 @@ nav img {
     font-weight: 400;
     width: 120px;
     height: 40px;
-    margin-top: 30px;
+    margin: 40px;
     transition: all .3s ease-in-out;
 }
 
@@ -338,6 +339,7 @@ nav img {
     align-items: center;
     justify-content: center;
     margin: 0 auto;
+    padding-bottom: 40px;
 }
 
 .card {
@@ -398,6 +400,54 @@ nav img {
 }
 .game5 {
     background: var(--color004) url(../imagens/wpp5.jpg) no-repeat center center;   
+}
+
+#games2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: calc(100vh - 90px);
+    background: var(--color004) url(../imagens/old_games.jpg) no-repeat left bottom;
+    background-size: cover;
+}
+
+.text2 {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    width: 40%; 
+    text-align: center;
+}
+
+.text2 h1 {
+    padding-top: 30px;
+    font-size: 5em;
+    line-height: 60px;
+}
+
+.text2 hr {
+    margin: 0 auto;
+    background-color: var(--color001);
+    height: 2px;
+    border: none;
+    width: 50%;
+    margin: 20px 0px 20px 0px;  
+}
+
+.text2 p {
+    font-weight: 400;
+}
+
+#specs {
+    padding: 40px;
+    background-color: white;
+}
+
+.specs div {
+    display: flex;
 }
 
 @media (max-width: 1350px) {
@@ -519,8 +569,8 @@ nav img {
 
     .text h1{
         padding: 30px;
-        font-size: 2.5em;
-        line-height: 35px;
+        font-size: 70px;
+        line-height: 60px;
     }
     
     .text hr {
@@ -533,7 +583,7 @@ nav img {
     }
 
     .explore-games {
-        margin: 30px;
+        margin: 40px;
     }
 
     .card {
@@ -551,8 +601,26 @@ nav img {
         font-size: 14px;
     }
 
+    .text h1 {
+        font-size: 50px;
+        line-height: 40px;
+    }
+
     .card {
-        height: 400px;
-        width: 300px;
+        height: 180px;
+        width: 400px;
+    }
+
+    .card picture {
+        border-radius: 10px;
+        width: 500px;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        margin: 0 auto;
+    }
+    
+    .card img {
+        width: 150px;
     }
 }
