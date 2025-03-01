@@ -57,30 +57,27 @@ header {
     right: 0px;
 }
 
-header img {
-    width: 30px;
+header a {
+    text-decoration: none;
 }
 
-header picture a {
-    font-family: var(--fonte002);
-    font-size: 20px;
-    text-decoration: none;
-    color: white;
-    display: flex;
-    align-items: center;
-    gap: 10px;
+header img {
+    width: 30px; 
 }
 
 header picture {
     display: flex;
     align-items: center;
     gap: 5px;
-    text-decoration: none;
-    color: white;
 }
 
 header picture p {
+    color: white;
     font-size: 20px;
+}
+
+.xbox1 {
+    font-family: var(--fonte002);
 }
 
 nav {
@@ -331,7 +328,7 @@ nav img {
 .explore-games:hover {
     cursor: pointer;
     transform: scale(1.05);
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
 }
 
 .container {
@@ -424,7 +421,7 @@ nav img {
 
 .text2 h1 {
     padding-top: 30px;
-    font-size: 5em;
+    font-size: 70px;
     line-height: 60px;
 }
 
@@ -446,8 +443,47 @@ nav img {
     background-color: white;
 }
 
-.specs div {
+.specs {
     display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.specs h1 {
+    color: var(--color001);
+    padding: 40px;
+    font-size: 3rem;
+}
+
+.item {
+    display: flex;
+    font-size: 1.5rem;
+}
+
+.item div {
+    width: 50%;
+    padding: 40px;
+}
+
+.item p {
+    margin-bottom: 40px;
+}
+
+footer {
+    background-color: var(--color005);
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
 
 @media (max-width: 1350px) {
@@ -569,8 +605,6 @@ nav img {
 
     .text h1{
         padding: 30px;
-        font-size: 70px;
-        line-height: 60px;
     }
     
     .text hr {
@@ -590,6 +624,31 @@ nav img {
         height: 300px;
         width: 700px;
     }
+
+    .text2 {
+        width: 80%;
+    }
+
+    .specs {
+        width: 100%;
+    }
+
+    .specs h1 {
+        font-size: 2rem;
+        line-height: 30px;
+        padding: 0px;
+        text-align: left;
+    }
+
+    .item {
+        align-items: center;
+        text-align: left;
+        flex-direction: column;
+    }
+
+    .item div {
+        width: 80%;
+    }
 }
 
 @media (max-width: 768px) {
@@ -608,7 +667,7 @@ nav img {
 
     .card {
         height: 180px;
-        width: 400px;
+        width: 80%;
     }
 
     .card picture {
@@ -622,5 +681,10 @@ nav img {
     
     .card img {
         width: 150px;
+    }
+
+    .text2 h1{
+        font-size: 45px;
+        line-height: 35px;
     }
 }
