@@ -471,15 +471,47 @@ nav img {
 }
 
 footer {
-    background-color: var(--color005);
-    color: white;
-    padding: 30px;
+    background-color: #d1d1d1;
+    color: #464646;
+    padding: 0px;
+    text-align: left;
+}
+
+footer .container2 {
+    padding: 40px;
+    margin: 0 10% 0 10%;
+    display: flex;
+    gap: 100px;
+}
+
+footer h2 {
+    padding-bottom: 15px;
+    font-size: 15px;
+}
+
+footer ul {
+    list-style-type: none;
+}
+
+footer ul li {
+    cursor: pointer;
+    padding-bottom: 15px;
+    font-size: 11px;
+}
+
+footer ul li:hover {
+    text-decoration: underline;
+}
+
+footer p {
+    padding: 20px;
     text-align: center;
+    font-size: 12px;
 }
 
 footer a {
     text-decoration: none;
-    color: white;
+    color: #464646 ;
 }
 
 footer a:hover {
@@ -706,5 +738,12 @@ footer a:hover {
     .text2 h1{
         font-size: 45px;
         line-height: 35px;
+    }
+
+    footer .container2 {
+        margin: 0 5% 0 5%;
+        gap: 50px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
     }
 }
