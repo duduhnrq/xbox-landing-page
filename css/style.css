@@ -510,6 +510,26 @@ footer a:hover {
         left: 0px;
         transition: 0.4s ease-out;
     }  
+
+    .game1 {
+        background: var(--color004) url(../imagens/2wpp1.jpg) no-repeat center center;
+    }
+    
+    .game2 {
+        background: var(--color004) url(../imagens/2wpp2.jpg) no-repeat center center;   
+    }
+    
+    .game3 {
+        background: var(--color004) url(../imagens/2wpp3.jpg) no-repeat center center;   
+    }
+    
+    .game4 {
+        background: var(--color004) url(../imagens/2wpp4.jpg) no-repeat center center;
+        background-attachment: cover;   
+    }
+    .game5 {
+        background: var(--color004) url(../imagens/2wpp5.jpg) no-repeat center center;   
+    }
 }
 
 @media (max-width: 1100px) {
