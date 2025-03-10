@@ -58,6 +58,9 @@ header {
 }
 
 header a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-decoration: none;
 }
 
@@ -541,7 +544,11 @@ footer a:hover {
         position: relative;
         left: 0px;
         transition: 0.4s ease-out;
-    }  
+    }
+    
+    .card picture {
+        align-items: center;
+    }
 
     .game1 {
         background: var(--color004) url(../imagens/2wpp1.jpg) no-repeat center center;
@@ -648,7 +655,7 @@ footer a:hover {
     }
 
     #games {
-        width: 99vw;
+        width: 100vw;
     }
 
     .text {
@@ -723,12 +730,7 @@ footer a:hover {
     }
 
     .card picture {
-        border-radius: 10px;
         width: 500px;
-        justify-content: center;
-        display: flex;
-        align-items: center;
-        margin: 0 auto;
     }
     
     .card img {
