@@ -55,9 +55,9 @@ Caso queira entrar em contato, me encontre em:
 
 - **Email**: eduardohnrque@gmail.com
 
-- **LinkedIn**: Eduardo Henrique
+- **LinkedIn**: [Eduardo Henrique](www.linkedin.com/in/eduardo-hnrque)
 
-- **GitHub**: @duduhnrq
+- **GitHub**: [duduhnrq](https://github.com/duduhnrq)
 
 ---
 
