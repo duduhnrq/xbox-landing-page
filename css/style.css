@@ -33,75 +33,81 @@ html {
 
 body {
     overflow-x: hidden;
-    max-width: 100vw;
     width: 100%;
     background-color: var(--color004);
     font-family: var(--fonte001);
 }
 
 section {
-    scroll-margin-top: 100px;
+    scroll-margin-top: 80px;
 }
+
+/*MENU DE NAVEGAÇÃO*/
 
 header {
     width: 100%;
-    backdrop-filter: blur(10px);
+    height: 80px;
     position: fixed;
     display: flex;
-    align-items: center;
     justify-content: center;
-    gap: 30%;
-    padding: 30px 0px 30px 0px;
     background-color: #1c1c1c7c;
     z-index: 100;
-    right: 0px;
 }
 
 header a {
+    text-decoration: none;
+}
+
+.menu {
     display: flex;
     justify-content: center;
     align-items: center;
     text-decoration: none;
 }
 
-header img {
-    width: 30px; 
-}
-
-header picture {
+.xbox {
     display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 5px;
+    gap: 10px;
+    color: var(--color007);
 }
 
-header picture p {
-    color: white;
+.xbox-logo {
+    display: flex;
+}
+
+.xbox-logo img {
+    width: 40px;
+}
+
+.xbox-text {
     font-size: 20px;
+    font-family: var(--fonte001);
 }
 
-.xbox1 {
+.xbox-text span {
     font-family: var(--fonte002);
 }
 
 nav {
     display: flex;
-    gap: 70px;
     align-items: center;
+    justify-content: center;
+    gap: 20vw;
 }
 
-nav ul {
+.menu li {
     list-style: none;
-    display: flex;
-    gap: 30px;
+    margin-right: 30px;
 }
 
-nav a {
+.menu li a {
     position: relative;
-    text-decoration: none;
     color: white;
 }
 
-nav a::after {
+.menu li a::after {
     content: "";
     position: absolute;
     left: 0;
@@ -112,21 +118,11 @@ nav a::after {
     transition: width 0.3s ease-in-out;
 }
 
-nav a:hover::after {
+.menu li a:hover::after {
     width: 100%;
 }
 
-.menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 22px;
-    color: white;
-    cursor: pointer;
-    transition: all .3s ease-in-out;
-} 
-
-nav picture {
+.search {
     width: 40px;
     height: 40px; 
     border: 2px solid white;
@@ -137,10 +133,24 @@ nav picture {
     cursor: pointer;
 }
 
-nav img {
+.search img {
     width: 50%;
-    height: auto;
 }
+
+.mobile-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.mobile-menu div {
+    width: 28px;
+    height: 2px;
+    background: #fff;
+    margin: 6px 0;
+    transition: all .3s;
+}
+
+/*SEÇÃO PRINCIPAL*/
 
 #home {
     display: flex;
@@ -280,6 +290,8 @@ nav img {
     background-color: white;
 }
 
+/*SEÇÃO DE JOGOS*/
+
 #games {
     background-color: white;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
@@ -331,7 +343,6 @@ nav img {
 .explore-games:hover {
     cursor: pointer;
     transform: scale(1.05);
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
 }
 
 .container {
@@ -402,6 +413,8 @@ nav img {
     background: var(--color004) url(../imagens/wpp5.jpg) no-repeat center center;   
 }
 
+/*SEÇÃO DE JOGOS 2*/
+
 #games2 {
     display: flex;
     justify-content: center;
@@ -440,6 +453,8 @@ nav img {
 .text2 p {
     font-weight: 400;
 }
+
+/*ESPECIFICAÇÕES*/
 
 #specs {
     padding: 40px;
@@ -521,7 +536,66 @@ footer a:hover {
     text-decoration: underline;
 }
 
+/*RESPONSIVIDADE*/
+
 @media (max-width: 1350px) {
+    .menu {
+        position: absolute;
+        top: 80px;
+        right: 0;
+        width: 100%;
+        height: 0vh;
+        background-color: #1c1c1c7c;
+        flex-direction: column;
+        gap: 25px;
+        align-items: center;
+        z-index: 1;
+        transition: all .3s ease-in;
+    }
+
+    .menu li {
+        opacity: 0;
+    }
+
+    @keyframes navLinkFade {
+        from {
+            opacity: 0;
+            transform: translateX(50px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    .search {
+        display: none;
+    }
+
+    .search img {
+        display: none;
+    }
+
+    .menu.active {
+        height: 20vh;
+    }
+    
+    .mobile-menu {
+        display: block;
+    }
+
+    .mobile-menu.active .line1 {
+        transform: rotate(-45deg) translate(-6px, 6px);
+    }
+    
+    .mobile-menu.active .line2 {
+      opacity: 0;
+    }
+    
+    .mobile-menu.active .line3 {
+        transform: rotate(45deg) translate(-6px, -6px);
+    }
+
     .container {
         flex-direction: column;
     }
@@ -573,59 +647,7 @@ footer a:hover {
 
 @media (max-width: 1100px) {
     section {
-        scroll-margin-top: 90px;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-
-    .menu {
-        display: flex; 
-        flex-direction: column;
-        width: 100%;
-        background-color: white;
-        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
-        z-index: 100;
-        position: absolute;
-        top: 90px; 
-        left: 0;
-        padding: 10px;
-        text-align: center;
-        opacity: 0;
-        visibility: hidden;
-        transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, visibility 0.3s ease-in-out;
-    }
-
-    .menu::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: -2px; 
-        width: 0%;
-        height: 1px;
-        transition: width 0.3s ease-in-out;
-    }
-
-    .menu-toggle:hover {
-        color: rgb(185, 185, 185);
-    }
-    
-    .menu a {
-        color: var(--color004);
-    }
-    
-    .menu.open {
-        opacity: 1;
-        visibility: visible;
-    }
-
-    nav picture {
-        display: none;
-    }
-
-    nav a::after {
-        background-color: var(--color004);
+        scroll-margin-top: 80px;
     }
 
     #home {
@@ -655,7 +677,7 @@ footer a:hover {
     }
 
     #games {
-        width: 100vw;
+        width: 100%;
     }
 
     .text {

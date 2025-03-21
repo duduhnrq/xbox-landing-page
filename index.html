@@ -9,29 +9,28 @@
 </head>
 <body>
     <header>
-        <a href="#home">
-            <picture class="xbox">
-                <img src="imagens/xbox_one_logo.png" alt="Xbox">
-                <p class="xbox1">XBOX</p>
-                <p>| Series S</p>
-            </picture>
-        </a>
-
         <nav>
-            <button class="menu-toggle" id="menu-toggle">
-                ☰
-            </button>
+            <a class="xbox" href="#home">
+                <picture class="xbox-logo">
+                    <img src="imagens/xbox_one_logo.png" alt="Xbox">
+                </picture>
+                <p class="xbox-text"><span>XBOX</span> | Series S</p>
+            </a>
 
-            <ul class="menu" id="menu">
+            <div class="mobile-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+
+            <ul class="menu">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#games">Games</a></li>
                 <li><a href="#specs">Specifications</a></li>
+                <li class="search">
+                    <img src="imagens/search.png" alt="">
+                </li>
             </ul>
-
-            <picture class="search">
-                <img src="imagens/search.png" alt="">
-            </picture>
-
         </nav>
     </header>
 
