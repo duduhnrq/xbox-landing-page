@@ -94,7 +94,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20vw;
+    gap: 30vw;
 }
 
 .menu li {
@@ -163,6 +163,7 @@ nav {
 .home {
     color: white;
     width: 400px;
+    margin-left: 40px;
 }
 
 .home h1 {
@@ -230,7 +231,7 @@ nav {
     position: relative;
     width: 100%;
     max-width: 800px;
-    margin: 0;
+    margin: 40px;
     overflow: hidden;
 }
 
@@ -353,7 +354,7 @@ nav {
     padding-bottom: 40px;
 }
 
-.card {
+.container div {
     display: flex;
     height: 500px;
     width: 300px;
@@ -364,23 +365,23 @@ nav {
     left: 0px;
 }
 
-.card:not(:first-child) {
+.container div:not(:first-child) {
     margin-left: -50px;
 }
 
-.card:hover {
+.container div:hover {
     cursor: pointer;
     transform: translateY(-20px);
     transition: 0.4s ease-out;
 }
 
-.card:hover ~ .card {
+.container div:hover ~ .container div {
   position: relative;
   left: 50px;
   transition: 0.4s ease-out;
 }
 
-.card picture {
+.container div picture {
     border-radius: 10px;
     width: 500px;
     justify-content: center;
@@ -389,27 +390,28 @@ nav {
     margin: 0 auto;
 }
 
-.card img {
+.container div img {
     padding: 30px;
 }
 
-.game1 {
+.card1 {
     background: var(--color004) url(../imagens/wpp1.jpg) no-repeat center center;
+    background-size: cover;
 }
 
-.game2 {
+.card2 {
     background: var(--color004) url(../imagens/wpp2.jpg) no-repeat center center;   
 }
 
-.game3 {
+.card3 {
     background: var(--color004) url(../imagens/wpp3.jpg) no-repeat center center;   
 }
 
-.game4 {
+.card4 {
     background: var(--color004) url(../imagens/wpp4.jpg) no-repeat center center;
     background-attachment: cover;   
 }
-.game5 {
+.card5 {
     background: var(--color004) url(../imagens/wpp5.jpg) no-repeat center center;   
 }
 
@@ -539,6 +541,55 @@ footer a:hover {
 /*RESPONSIVIDADE*/
 
 @media (max-width: 1350px) {
+    .container {
+        flex-direction: column;
+    }
+    
+    .container div {
+        height: 300px;
+        width: 60%;
+    }
+    
+    .container div:not(:first-child) {
+        margin-left: 0px;
+        margin-top: -30px;
+    }
+    
+    .container div:hover {
+        transform: translate(10px 50%)
+    }
+    
+    .container div:hover ~ .card {
+        position: relative;
+        left: 0px;
+        transition: 0.4s ease-out;
+    }
+    
+    .container div picture {
+        align-items: center;
+    }
+
+    .card1 {
+        background: var(--color004) url(../imagens/2wpp1.jpg) no-repeat center center;
+    }
+    
+    .card2 {
+        background: var(--color004) url(../imagens/2wpp2.jpg) no-repeat center center;   
+    }
+    
+    .card3 {
+        background: var(--color004) url(../imagens/2wpp3.jpg) no-repeat center center;
+    }
+    
+    .card4 {
+        background: var(--color004) url(../imagens/2wpp4.jpg) no-repeat center center;
+    }
+    .card5 {
+        background: var(--color004) url(../imagens/2wpp5.jpg) no-repeat center center;   
+    }
+}
+
+@media (max-width: 1100px) {
     .menu {
         position: absolute;
         top: 80px;
@@ -595,57 +646,7 @@ footer a:hover {
     .mobile-menu.active .line3 {
         transform: rotate(45deg) translate(-6px, -6px);
     }
-
-    .container {
-        flex-direction: column;
-    }
     
-    .card {
-        height: 300px;
-        width: 800px;
-    }
-    
-    .card:not(:first-child) {
-        margin-left: 0px;
-        margin-top: -30px;
-    }
-    
-    .card:hover {
-        transform: translate(10px 50%)
-    }
-    
-    .card:hover ~ .card {
-        position: relative;
-        left: 0px;
-        transition: 0.4s ease-out;
-    }
-    
-    .card picture {
-        align-items: center;
-    }
-
-    .game1 {
-        background: var(--color004) url(../imagens/2wpp1.jpg) no-repeat center center;
-    }
-    
-    .game2 {
-        background: var(--color004) url(../imagens/2wpp2.jpg) no-repeat center center;   
-    }
-    
-    .game3 {
-        background: var(--color004) url(../imagens/2wpp3.jpg) no-repeat center center;   
-    }
-    
-    .game4 {
-        background: var(--color004) url(../imagens/2wpp4.jpg) no-repeat center center;
-        background-attachment: cover;   
-    }
-    .game5 {
-        background: var(--color004) url(../imagens/2wpp5.jpg) no-repeat center center;   
-    }
-}
-
-@media (max-width: 1100px) {
     section {
         scroll-margin-top: 80px;
     }
@@ -655,21 +656,26 @@ footer a:hover {
         gap: 5%;
         text-align: center;
     }
-
-    .carousel {
-        max-width: 500px;
+    
+    .home {
+        margin: 0;
     }
-
+    
     .home h1 {
         padding-bottom: 20px;
     }
-
+    
     .home hr {
         margin: 0 auto;
     }
-
+    
     .home p {
         padding-top: 20px;
+    }
+
+    .carousel {
+        max-width: 500px;
+        margin: 0;
     }
 
     .btn {
@@ -701,11 +707,6 @@ footer a:hover {
         margin: 40px;
     }
 
-    .card {
-        height: 300px;
-        width: 700px;
-    }
-
     .text2 {
         width: 80%;
     }
@@ -732,7 +733,7 @@ footer a:hover {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 850px) {
     .home h1 {
         font-size: 40px;
     }
@@ -745,18 +746,10 @@ footer a:hover {
         font-size: 50px;
         line-height: 40px;
     }
-
-    .card {
-        height: 180px;
-        width: 80%;
-    }
-
-    .card picture {
-        width: 500px;
-    }
     
-    .card img {
-        width: 150px;
+    .container div {
+        height: 220px;
+        width: 85%;
     }
 
     .text2 h1{
