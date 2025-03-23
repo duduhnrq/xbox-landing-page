@@ -83,7 +83,7 @@ header a {
 
 .xbox-text {
     font-size: 20px;
-    font-family: var(--fonte001);
+    font-family: var(--fonte001); 
 }
 
 .xbox-text span {
@@ -169,6 +169,9 @@ nav {
 .home h1 {
     font-size: 70px;
     line-height: 60px;
+    opacity: 0;
+    transform: translateX(10px);
+    transition: opacity .5s ease-in-out, transform .5s ease-in-out;
 }
 
 .home hr {
@@ -177,11 +180,17 @@ nav {
     border: none;
     width: 40%;
     margin: 20px 0px 20px 0px;
+    opacity: 0;
+    transform: translateX(10px);
+    transition: opacity .5s ease-in-out .3s, transform .5s ease-in-out .3s;
 }
 
 .home p {
     font-weight: 400;
     padding-bottom: 20px;
+    opacity: 0;
+    transform: translateX(10px);
+    transition: opacity .5s ease-in-out .6s, transform .5s ease-in-out .6s;
 }
 
 .btn {
@@ -193,6 +202,9 @@ nav {
 
 .btn a {
     flex: 1;
+    opacity: 0;
+    transform: translateX(10px);
+    transition: opacity .5s ease-in-out .8s, transform .5s ease-in-out .8s;
 }
 
 .btn button{
@@ -225,6 +237,14 @@ nav {
 .btn .shop-now:hover {
     cursor: pointer;
     transform: scale(1.05);
+}
+
+.home.visible h1,
+.home.visible hr,
+.home.visible p,
+.home.visible a {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 .carousel {

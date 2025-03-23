@@ -76,3 +76,10 @@ const mobileNavbar = new MobileNavbar(
   ".menu li",
 );
 mobileNavbar.init();
+
+document.addEventListener('DOMContentLoaded', function () {
+  const homeText = document.querySelector('.home');
+  setTimeout(() => {
+    homeText.classList.add('visible');
+  }, 100);
+})
