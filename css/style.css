@@ -560,6 +560,12 @@ footer a:hover {
 
 /*RESPONSIVIDADE*/
 
+@media (max-width: 1400px) {
+    .carousel {
+        width: 30%;
+    }
+}
+
 @media (max-width: 1350px) {
     .container {
         flex-direction: column;
